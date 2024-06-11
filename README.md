@@ -119,3 +119,21 @@ graph LR
 
     softmax--"Probablity"-->pred;
 ```
+
+
+## The Folder Structure
+The files of this project are organized as follows:
+```shell
+.
+├── data
+│   └── data_loader.py
+├── nn_modules
+│   ├── decoder
+│   └── encoder
+├── README.md
+├── scripts
+│   ├── eval.py
+│   ├── test.py
+│   └── train.py
+└── utils
+```
