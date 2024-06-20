@@ -1,6 +1,6 @@
 import unittest
 import torch
-from decoder import TopDecoder
+from top_decoder import TopDecoder
 
 
 class TestTopDecoder(unittest.TestCase):
