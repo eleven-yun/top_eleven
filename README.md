@@ -129,7 +129,9 @@ The files of this project are organized as follows:
 │   └── data_loader.py
 ├── nn_modules
 │   ├── decoder
-│   └── encoder
+│   ├── embedding
+│   ├── encoder
+│   └── transformer
 ├── README.md
 ├── scripts
 │   ├── eval.py
