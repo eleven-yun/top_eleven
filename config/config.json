@@ -1,0 +1,21 @@
+{
+    "train_params": {
+        "batch_size": 5,
+        "epoch": 30,
+        "warmup": 100,
+        "save_path": "./saved",
+        "optimize_params": {
+            "lr": 0.01,
+            "weight_decay": 1e-5,
+            "eps": 1e-4
+        }
+    },
+    "model_params": {
+        "num_layers": 6,
+        "d_model": 512,
+        "nhead": 8,
+        "source_length": 10,
+        "target_length": 50,
+        "num_classes": 3
+    }
+}

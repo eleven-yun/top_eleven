@@ -8,16 +8,16 @@ class TopDecoder(nn.Module):
         self.layers = nn.ModuleList(
             [nn.TransformerDecoderLayer(d_model, nhead) for _ in range(num_layers)])
 
-    def forward(self, x: Tensor, memory: Tensor) -> Tensor:
+    def forward(self, tgt: Tensor, mem: Tensor) -> Tensor:
         """Pass the inputs through the decoder layer.
 
         Parameters
         ----------
-        x : Tensors
+        tgt : Tensors
             [tgt_length, batch_size, d_model]
             the sequence to the decoder layer (required).
-        memory : Tensor,
-            [enc_length, batch_size, d_model]
+        mem : Tensor,
+            [mem_length, batch_size, d_model]
             the sequence from the last layer of the encoder (required).
 
         Returns
@@ -26,5 +26,5 @@ class TopDecoder(nn.Module):
             [batch_size, tgt_length, d_model]
         """
         for layer in self.layers:
-            x = layer(x, memory)
-        return x
+            tgt = layer(tgt, mem)
+        return tgt
